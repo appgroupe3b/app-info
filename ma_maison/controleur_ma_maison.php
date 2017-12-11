@@ -1,5 +1,5 @@
 <?php
-//On se connecte à la BDD
+//On se connecte Ã  la BDD
 try
 {
 	$bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');

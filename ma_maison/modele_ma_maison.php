@@ -1,6 +1,6 @@
 <?php
 
-//Fonction permettant de récupérer les pièces du client
+//Fonction permettant de rÃ©cupÃ©rer les piÃ¨ces du client
 
 function recuperer_pieces($bdd)
 {

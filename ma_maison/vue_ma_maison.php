@@ -12,6 +12,8 @@
     
     <?php require 'controleur_ma_maison.php' ?>
     
+	
+	<!-- Le corps -->
     <!-- Le corps -->
     <h1>Ma maison</h1>
     

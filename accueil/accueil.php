@@ -19,7 +19,7 @@
 
       </header>
 
-    <nav>
+    <nav style="position: fixed; text-align: center;">
     				<ul id="menu_horizontal">
 						<li><a href="accueil.php" class="button">Accueil</a></li>
 						<li><a href="ma_maison.php" class="button">Ma maison</a></li>

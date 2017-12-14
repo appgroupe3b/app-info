@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 //On se connecte à la BDD
 try
 {
@@ -13,19 +10,15 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
-include 'modele_catalogue01.php';
+include '../modele/modele_catalogue01.php';
 
-$donnees = recuperer_donnees($bdd);
-
-
-/*if (isset($_GET['id_piece']))
+if (isset($_GET['id_catalogue']))
 {
-		/*$_GET['id_piece'] = (int) $_GET['id_piece'];*/
-	
-		/*$_GET['id_piece'] = $id_piece();
-		
-		$capteurs = recuperer_capteurs($bdd, $id_piece); 
+    $id_catalogue = $_GET['id_catalogue'];
+    echo $id_catalogue;
+    
+    $donnees = recuperer_donnees($bdd, $id_catalogue);
 }
-*/
+
 
 ?>

@@ -20,14 +20,50 @@
       </header>
 
     <nav style="position: fixed; text-align: center;">
-    				<ul id="menu_horizontal">
-						<li><a href="accueil.php" class="button">Accueil</a></li>
-						<li><a href="ma_maison.php" class="button">Ma maison</a></li>
-						<li><a href="programmations.php" class="button">Programmations</a></li>
-						<li><a href="suivi_consommation.php" class="button">Suivi de consommation</a></li>
-						<li><a href="espace_client.php" class="button">Espace Client</a></li>
-						<li><a href="messagerie.php" class="button">Nous contacter</a></li>
-					</ul>
+    				<ul id="menu-demo2">
+
+
+	<li><a href="#">Accueil</a>
+		<ul>
+			<li><a href="#">Suivie général mensuel</a></li>
+			<li><a href="#">Suivie général des capteurs</a></li>
+			<li><a href="#">Promos</a></li>
+			
+		</ul>
+	</li>
+	<li><a href="#">Ma maison</a>
+		<ul>
+			<li><a href="#">Pièces</a></li>
+			
+		</ul>
+	</li>
+	<li><a href="#">Suivi de consommation</a>
+		<ul>
+			<li><a href="#">EDF</a></li>
+			<li><a href="#">EAU</a></li>
+			<li><a href="#">GAZ</a></li>
+			
+		</ul>
+	</li>
+	<li><a href="#">Programmation</a>
+		
+	</li>
+	<li><a href="#">Espace Client</a>
+		<ul>
+			<li><a href="#">Paramètres du compte</a></li>
+			
+		</ul>
+	</li>
+	<li><a href="#">Assistance</a>
+		<ul>
+			<li><a href="#">Conditions générales d'utilisation</a></li>
+			<li><a href="#">FAQ</a></li>
+			<li><a href="#">Messagerie</a></li>
+			
+		</ul>
+	
+	</li>
+</ul>
     </nav>
 
     	<body>

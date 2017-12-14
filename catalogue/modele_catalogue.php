@@ -67,4 +67,5 @@ function recuperer_catalogue($bdd)
 }
 
 
+
 ?>

@@ -24,16 +24,18 @@
 				foreach($pieces as $element)
 				{
 					echo '<a class="w3-button w3-block w3-teal" 
-					href="vue_ma_maison.php?id_piece='.$element['id'].'" >' . $element['nom'] . '</a> <br/>';
-				}
-			
-				if(isset($capteurs)) {
-					foreach($capteurs as $truc)
-					{
-						echo $truc['id'] . '<br/>';
-					}
+					href="vue_capteurs.php?id_piece='.$element['id'].'" >' . $element['nom'] . '</a> <br/>';
 				}
 			?>
+		</div>
+		
+		<div>
+			<h3>
+				Ajouter :
+			</h3>
+			<p><a href="vue_ajouter.php?ajouter=pièce">Ajouter une pièce</a></p>
+			<p><a href="vue_ajouter.php?ajouter=capteur">Ajouter une capteur</a></p>
+		
 		</div>
     
     <!-- Le pied de page -->

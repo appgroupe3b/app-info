@@ -9,16 +9,16 @@ catch(Exception $e)
 {
     die('Erreur : '.$e->getMessage());
 }
-include '../modele/newmodele.php';
-$catalogue = recuperer_catalogue($bdd);
-$catalogue_capteurs = recuperer_capteurs($bdd);
-$catalogue_actionneurs = recuperer_actionneurs($bdd);
-$catalogue_cemacs = recuperer_cemacs($bdd);
+include 'newmodele.php';
+$liste_catalogue = recuperer_catalogue($bdd);
+$liste_capteurs = recuperer_capteurs($bdd);
+$liste_actionneurs = recuperer_actionneurs($bdd);
+$liste_cemacs = recuperer_cemacs($bdd);
 
 if (isset($_GET['id_catalogue']))
 {
-    $id_cataloguee = $_GET['id_catalogue'];
+    $id_catalogue = $_GET['id_catalogue'];
     
-    $donnees = recuperer_donnees($bdd, $id_piece);
+    $liste_donnees = recuperer_donnees($bdd, $id_catalogue);
 }
 ?>

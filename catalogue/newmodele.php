@@ -1,81 +1,64 @@
 <?php
 
-//Fonction permettant de récupérer les noms des capteurs
+//Fonction permettant de rÃ©cupÃ©rer les piÃ¨ces du client
+
 function recuperer_capteurs($bdd)
 {
     $liste_capteurs = array();
     
     $reponse = $bdd->query("SELECT id,nom FROM catalogue WHERE nom LIKE '%capteur%'");
-    /*recherche seulement les noms des éléments ayant 'capteur'*/
-    $catalogue_capteurs = $reponse->fetchAll(PDO::FETCH_ASSOC);
-    /*while (!$donnees = $reponse->fetch())
-     {
-     $liste_capteurs[] = $donnees;
-     }*/
+    $liste_capteurs = $reponse->fetchAll(PDO::FETCH_ASSOC);
     
-    return $catalogue_capteurs;
+    return $liste_capteurs;
     
 }
-//Fonction permettant de récupérer les noms des actionneurs
 
 function recuperer_actionneurs($bdd)
 {
     $liste_actionneurs = array();
     
-    $reponse = $bdd->query("SELECT id,nom FROM catalogue WHERE nom LIKE'%actionneur%'");
-    /*recherche seulment les noms des éléments ayant par 'actionneur'*/
-    $catalogue_actionneurs = $reponse->fetchAll(PDO::FETCH_ASSOC);
-    /*while (!$donnees = $reponse->fetch())
-     {
-     $liste_actionneurs[] = $donnees;
-     }*/
+    $reponse = $bdd->query("SELECT id,nom FROM catalogue WHERE nom LIKE '%actionneur%'");
+    $liste_actionneurs = $reponse->fetchAll(PDO::FETCH_ASSOC);
     
-    return $catalogue_actionneurs;
+    return $liste_actionneurs;
     
 }
-
-//Fonction permettant de récupérer les noms des cemacs
-
 
 function recuperer_cemacs($bdd)
 {
     $liste_cemacs = array();
     
-    $reponse = $bdd->query("SELECT id,nom FROM catalogue WHERE nom LIKE'%cemac%'");
-    /*recherche seulement les noms des éléments ayant par 'cemac'*/
-    $catalogue_cemacs = $reponse->fetchAll(PDO::FETCH_ASSOC);
-    /*while (!$donnees = $reponse->fetch())
-     {
-     $liste_cemacs[] = $donnees;
-     }*/
+    $reponse = $bdd->query("SELECT id,nom FROM catalogue WHERE nom LIKE '%capteur%'");
+    $liste_cemacs = $reponse->fetchAll(PDO::FETCH_ASSOC);
     
-    return $catalogue_cemacs;
+    return $liste_cemacs;
     
 }
-
-//Fonction permettant de récupérer les noms des elements du catalogue
 
 function recuperer_catalogue($bdd)
 {
     $liste_catalogue = array();
     
     $reponse = $bdd->query("SELECT id,nom FROM catalogue");
-    $catalogue = $reponse->fetchAll(PDO::FETCH_ASSOC);
-    /*while (!$donnees = $reponse->fetch())
-     {
-     $liste_catalogue[] = $donnees;
-     }*/
+    $liste_catalogue = $reponse->fetchAll(PDO::FETCH_ASSOC);
     
-    return $catalogue;
+    return $liste_catalogue;
     
 }
 
+//function recuperer_donnees($bdd, $id_catalogue)
+//{
+ //   $req = $bdd->prepare('SELECT catalogue.nom, catalogue.reference, catalogue.propriete, catalogue.promotion, catalogue.prix, catalogue.unités_actives FROM catalogue WHERE id_catalogue = ?');
+//    $req->execute(array($id_catalogue));
+//    $liste_donnees = $req->fetchAll(PDO::FETCH_ASSOC); 
+//    return $liste_donnees;
+//}
 function recuperer_donnees($bdd, $id_catalogue)
 {
-    $req = $bdd->prepare('SELECT *
-						FROM catalogue WHERE id_catalogue = ?');
-    $req->execute(array($id_piece));
-    $donnees= $req->fetchAll(PDO::FETCH_ASSOC);
-    return $donnees;
+    $req = $bdd->prepare('SELECT catalogue.nom, catalogue.reference, catalogue.propriete, catalogue.promotion, catalogue.prix, catalogue.unités_actives FROM catalogue WHERE id_catalogue = ?');
+    $req->execute(array($id_catalogue));
+    $liste_donnees = $req->fetchAll(PDO::FETCH_ASSOC); 
+    return $liste_donnees;
 }
+
 ?>

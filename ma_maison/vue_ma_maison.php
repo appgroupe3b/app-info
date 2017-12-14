@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="iso-8859-15" />
+        <meta charset="utf-8" />
 		<link rel="stylesheet" href="style.css" />
         <title>DomIsep</title> 
     </head>
@@ -13,7 +13,6 @@
     <?php require 'controleur_ma_maison.php' ?>
     
 	
-	<!-- Le corps -->
     <!-- Le corps -->
     <h1>Ma maison</h1>
     
@@ -25,12 +24,14 @@
 				foreach($pieces as $element)
 				{
 					echo '<a class="w3-button w3-block w3-teal" 
-					href="controleur_ma_maison.php?id_piece='.$element['id'].'" >' . $element['nom'] . '</a> <br/>';
+					href="vue_ma_maison.php?id_piece='.$element['id'].'" >' . $element['nom'] . '</a> <br/>';
 				}
-				
-				foreach($capteurs as $truc)
-				{
-					echo $truc['nom'] . '<br/>';
+			
+				if(isset($capteurs)) {
+					foreach($capteurs as $truc)
+					{
+						echo $truc['id'] . '<br/>';
+					}
 				}
 			?>
 		</div>

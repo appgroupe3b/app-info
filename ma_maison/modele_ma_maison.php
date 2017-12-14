@@ -19,19 +19,10 @@ function recuperer_pieces($bdd)
 
 function recuperer_capteurs($bdd, $id_piece)
 {
-	/*$id_piece = array();
-	$req = $bdd->prepare('SELECT id FROM piece WHERE nom = ? ');
-	$req->execute(array($nom_piece));
-	$id_piece = $reponse->fetchAll(PDO::FETCH_ASSOC);*/
-	
-	$liste_capteurs = array();
-	$req = $bdd->prepare('SELECT capteurs.nom
-						FROM capteurs
-						INNER JOIN pieces
-						ON pieces.? = capteurs.id_piece');
-	$req->execute(array($id_piece()));
-	$liste_capteurs = $reponse->fetchAll(PDO::FETCH_ASSOC);
-	
+	$req = $bdd->prepare('SELECT *
+						FROM capteurs WHERE id_piece = ?');
+	$req->execute(array($id_piece));
+	$liste_capteurs = $req->fetchAll(PDO::FETCH_ASSOC);	
 	return $liste_capteurs;
 }
 

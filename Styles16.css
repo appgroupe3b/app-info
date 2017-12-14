@@ -1,0 +1,167 @@
+#menu-demo2, #menu-demo2 ul{
+padding:0;
+margin:0;
+list-style:none;
+text-align:center;
+}
+#menu-demo2 li{
+display:inline-block;
+position:relative;
+}
+
+
+
+#menu-demo2 ul li{
+display:inherit;
+}
+#menu-demo2 ul li:last-child{
+
+}
+#menu-demo2 ul{
+position:absolute;
+z-index: 1000;
+max-height:0;
+left: 0;
+right: 0;
+overflow:hidden;
+}
+#menu-demo2 li:hover ul{
+max-height:15em;
+}
+/* background des liens menus */
+#menu-demo2 li:first-child{
+background-color: #43B77A;
+background-image:-webkit-linear-gradient(top, #43B77Av 0%, #43B77A 100%);
+background-image:linear-gradient(to bottom, #43B77A 0%, #43B77A 100%);
+}
+#menu-demo2 li:nth-child(2){
+background-color: #43B77A;
+background-image: -webkit-linear-gradient(top, #43B77A 0%, #43B77A 100%);
+background-image:linear-gradient(to bottom, #43B77A 0%, #43B77A 100%);
+}
+#menu-demo2 li:nth-child(3){
+background-color: #43B77A;
+background-image:-webkit-linear-gradient(top, #43B77A 0%, #43B77A 100%);
+background-image:linear-gradient(to bottom, #43B77A 0%, #43B77A 100%);
+}
+#menu-demo2 li:nth-child(4){
+background-color: #43B77A;
+background-image: -webkit-linear-gradient(top, #43B77A 0%, #43B77A 100%);
+background-image:linear-gradient(to bottom, #43B77A 0%, #43B77A 100%);
+}
+#menu-demo2 li:nth-child(5){
+background-color: #43B77A;
+background-image: -webkit-linear-gradient(top, #43B77A 0%, #43B77A 100%);
+background-image:linear-gradient(to bottom, #43B77A 0%, #43B77A 100%);
+}
+#menu-demo2 li:nth-child(6){
+background-color: #43B77A;
+background-image: -webkit-linear-gradient(top, #43B77A 0%, #43B77A 100%);
+background-image:linear-gradient(to bottom, #43B77A 0%, #43B77A 100%);
+}
+#menu-demo2 li:nth-child(7){
+background-color: #43B77A;
+background-image: -webkit-linear-gradient(top, #43B77A 0%, #43B77A 100%);
+background-image:linear-gradient(to bottom, #43B77A 0%, #43B77A 100%);
+}
+#menu-demo2 li:last-child{
+background-color: #43B77A;
+background-image:-webkit-linear-gradient(top, #43B77A 0%, #43B77A 100%);
+background-image:linear-gradient(to bottom, #43B77A 0%, #43B77A 100%);
+}
+/* background des liens sous menus */
+#menu-demo2 li:first-child li{
+background:#cfcfcf;
+}
+#menu-demo2 li:nth-child(2) li{
+background:#cfcfcf;
+}
+#menu-demo2 li:nth-child(3) li{
+background:#cfcfcf;
+}
+#menu-demo2 li:nth-child(4) li{
+background:#cfcfcf;
+}
+#menu-demo2 li:nth-child(5) li{
+background:#cfcfcf;
+}
+#menu-demo2 li:last-child li{
+background:#cfcfcf;
+}
+/* background des liens menus et sous menus au survol */
+#menu-demo2 li:first-child:hover, #menu-demo2 li:first-child li:hover{
+background:#cfcfcf;
+}
+#menu-demo2 li:nth-child(2):hover, #menu-demo2 li:nth-child(2) li:hover{
+background:#cfcfcf;
+}
+#menu-demo2 li:nth-child(3):hover, #menu-demo2 li:nth-child(3) li:hover{
+background:#cfcfcf;
+}
+#menu-demo2 li:last-child:hover, #menu-demo2 li:last-child li:hover{
+background:#cfcfcf;
+}
+/* les a href */
+#menu-demo2 a{
+text-decoration:none;
+display:block;
+padding:8px 32px;
+color:#fff;
+font-family:arial;
+}
+#menu-demo2 ul a{
+padding:8px 0;
+}
+#menu-demo2 li:hover li a{
+color:#fff;
+text-transform:inherit;
+}
+#menu-demo2 li:hover a, #menu-demo2 li li:hover a{
+color:#000;
+}
+
+header {
+
+	background: #4C4C4C;
+	width: 100%;
+	top: 0;
+	position: fixed;
+	margin: 0 auto;
+}
+
+
+
+nav {
+	width: 100%;
+	margin-top: -200px;
+	background: #43B77A;
+	position: top-right;
+}
+
+a.button{
+	background:url(img/button.gif);
+	color:#FFFFFF;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a:hover.button{
+	color:#4C4C4C;
+}
+
+/* Je sélectionne les <li> du menu horizontal */
+
+
+ul#menu-demo2 {
+	list-style-type : none; /* Car sinon les puces se placent n'importe où */
+}
+body{
+	margin-top : 110px;
+	width : AUTO;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+

@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
 <head>
-<meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="footer.css">
 <title>Footer</title>
 </head>
@@ -9,9 +6,9 @@
 
     		<div id="socials">
 
-    			<a href="#" class="social"><img src="mail.png" alt="social"/></a>
-                <a href="#" class="social"><img src="twi.png" alt="social"/></a>
-                <a href="#" class="social"><img src="face.png" alt="social"/></a>
+    			<a href="#" class="social"><img src="../img/mail.png" alt="social"/></a>
+                <a href="#" class="social"><img src="../img/twi.png" alt="social"/></a>
+                <a href="#" class="social"><img src="../img/face.png" alt="social"/></a>
 
         	</div>
 

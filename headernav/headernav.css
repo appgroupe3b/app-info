@@ -35,9 +35,12 @@ ul#menu_horizontal li {
 	display : inline;
 	margin-left: 5px;
 	padding : 0 2.7em; 	/* Pour espacer les boutons entre eux */
+	
+	
 }
 ul#menu_horizontal {
 	list-style-type : none; /* Car sinon les puces se placent n'importe où */
+	color: #fff;
 }
 body{
 	margin-top : 200px;
@@ -46,5 +49,4 @@ body{
 
 a {
 	text-decoration: none;
-	color: #fff;
 }

@@ -3,12 +3,14 @@
     <head>
         <meta charset="utf-8" />
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="../footer/footer.css">
+		<link rel="stylesheet" type="text/css" href="../headernav/headernav.css">
         <title>DomIsep</title> 
     </head>
  
     <body>
  
-    <?php /* <?php include 'header.php'; ?> */ ?>	
+    <?php include '../headernav/headernav.php'; ?>	
     
     <?php require 'controleur_ma_maison.php' ?>
     
@@ -30,6 +32,8 @@
 		</div>
     
     <!-- Le pied de page -->
-        
+	<footer>
+       <?php include '../footer/footer.php' ?>
+	</footer>
     </body>
 </html>

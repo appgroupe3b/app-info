@@ -3,15 +3,14 @@
     <head>
         <meta charset="utf-8" />
         <title>Accueil</title>
-        <link rel="stylesheet" type="text/css" href="headernav.css">
-        <link rel="stylesheet" type="text/css" href="accueil.css">
-        <link rel="stylesheet" type="text/css" href="footer.css">
+        <link rel="stylesheet" type="text/css" href="../headernav/headernav.css">
+        <link rel="stylesheet" type="text/css" href="../footer/footer.css">
     </head>
 
     <header>
       <table>
   <tr>
-    <td><img src="logo.png" alt=""width="100" height="100" /></td>
+    <td><img src="../img/logo.png" alt=""width="100" height="100" /></td>
     <td><font color="white" face="Verdana" ><h2>DomIsep</h2>
     <p>A smart house makes a better home </p></td></font>
   </tr>
@@ -22,16 +21,16 @@
     <nav style="position: fixed; text-align: center;">
     				<ul id="menu_horizontal">
 						<li><a href="accueil.php" class="button">Accueil</a></li>
-						<li><a href="ma_maison.php" class="button">Ma maison</a></li>
-						<li><a href="programmations.php" class="button">Programmations</a></li>
+						<li><a href="../ma_maison/vue_ma_maison.php" class="button">Ma maison</a></li>
+						<li><a href="../programmations/programmation.php" class="button">Programmations</a></li>
 						<li><a href="suivi_consommation.php" class="button">Suivi de consommation</a></li>
 						<li><a href="espace_client.php" class="button">Espace Client</a></li>
-						<li><a href="messagerie.php" class="button">Nous contacter</a></li>
+						<li><a href="../messagerie/messagerie.php" class="button">Nous contacter</a></li>
 					</ul>
     </nav>
 
-    	<body>
-    			<main style="display: block; margin-left: 120px; width:100%; text-align: justify; ">
+    
+    			<main style="display: block; width:100%; text-align: justify; ">
       				<table>
   						<tr>
     						
@@ -42,7 +41,7 @@
 							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></td>
-							<td><img src="etatmaison.png" width="500" height="300" /></td>
+							<td><img src="../img/etatmaison.png" width="500" height="300" /></td>
   						</tr>
 					</table>
 
@@ -57,7 +56,7 @@
 							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></td>
-							<td><img src="notifications.png" width="500" height="300" /></td>
+							<td><img src="../img/notifications.png" width="500" height="300" /></td>
   						</tr>
 					</table>
 				
@@ -71,7 +70,7 @@
 							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></td>
-							<td><img src="suiviconso.png" width="500" height="300" /></td>
+							<td><img src="../img/suiviconso.png" width="500" height="300" /></td>
   						</tr>
 					</table>
 				
@@ -86,28 +85,20 @@
 							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></td>
-							<td><img src="promos.png" width="500" height="300" /></td>
+							<td><img src="../img/promos.png" width="500" height="300" /></td>
   						</tr>
 					</table>
-				</main>
+				
 
 			<div class="clear"></div>
 			<!-- Les cadres seront flottants, il faut appliquer un clear:both pour continuer -->
-    	</body>
+			</main>
 
 
 
     	<footer>
 
-    		<div id="socials">
-
-    			<a href="#" class="social"><img src="mail.png" alt="social"/></a>
-                <a href="#" class="social"><img src="twi.png" alt="social"/></a>
-                <a href="#" class="social"><img src="face.png" alt="social"/></a>
-
-        	</div>
-
-        	<div class="copyright">&copy;  2017 All Rights Reserved</div>
+    		<?php include '../footer/footer.php' ?>
 
     	</footer>
 

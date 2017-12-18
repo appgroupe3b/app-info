@@ -63,4 +63,8 @@
     <!-- Le pied de page -->
         
     </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> fdf50e9ebb886a454646a18266a7d17a5fe4ec7c

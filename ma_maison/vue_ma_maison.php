@@ -3,12 +3,15 @@
     <head>
         <meta charset="utf-8" />
 		<link rel="stylesheet" href="style.css" />
-        <title>DomIsep</title> 
+		<link rel="stylesheet" type="text/css" href="../footer/footer.css">
+		<link rel="stylesheet" type="text/css" href="../headernav/headernav.css">
+        <title>Ma maison</title> 
     </head>
  
     <body>
  
-    <?php /* <?php include 'header.php'; ?> */ ?>	
+   
+	<?php include '../headernav/headernav.php' ?>
     
     <?php require 'controleur_ma_maison.php' ?>
     
@@ -37,8 +40,10 @@
 			<p><a href="vue_ajouter.php?ajouter=capteur">Ajouter une capteur</a></p>
 		
 		</div>
-    
-    <!-- Le pied de page -->
-        
     </body>
+    <!-- Le pied de page -->
+	<footer>
+	<?php include '../footer/footer.php' ?>
+    </footer>
+    
 </html>

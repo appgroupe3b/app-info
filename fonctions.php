@@ -1,6 +1,6 @@
 <?php
 
-//Fonction permettant de récupérer les pièces du client
+//Fonction permettant de rÃ©cupÃ©rer les piÃ¨ces du client
 
 function recuperer_pieces($bdd)
 {
@@ -81,18 +81,30 @@ function recuperer_catalogue($bdd)
 
 //function recuperer_donnees($bdd, $id_catalogue)
 //{
-//   $req = $bdd->prepare('SELECT catalogue.nom, catalogue.reference, catalogue.propriete, catalogue.promotion, catalogue.prix, catalogue.unit�s_actives FROM catalogue WHERE id_catalogue = ?');
+//   $req = $bdd->prepare('SELECT catalogue.nom, catalogue.reference, catalogue.propriete, catalogue.promotion, catalogue.prix, catalogue.unités_actives FROM catalogue WHERE id_catalogue = ?');
 //    $req->execute(array($id_catalogue));
 //    $liste_donnees = $req->fetchAll(PDO::FETCH_ASSOC);
 //    return $liste_donnees;
 //}
 function recuperer_donnees($bdd, $id_catalogue)
 {
-    $req = $bdd->prepare('SELECT catalogue.nom, catalogue.reference, catalogue.propriete, catalogue.promotion, catalogue.prix, catalogue.unit�s_actives FROM catalogue WHERE id_catalogue = ?');
+    $req = $bdd->prepare('SELECT catalogue.nom, catalogue.reference, catalogue.propriete, catalogue.promotion, catalogue.prix, catalogue.unités_actives FROM catalogue WHERE id_catalogue = ?');
     $req->execute(array($id_catalogue));
     $liste_donnees = $req->fetchAll(PDO::FETCH_ASSOC);
     return $liste_donnees;
 }
+
+function recuperer_categories($bdd)
+{
+	$liste_categorie = array();
+    
+    $reponse = $bdd->query("SELECT id,nom FROM categorie");
+    $liste_categorie = $reponse->fetchAll(PDO::FETCH_ASSOC);
+    
+    return $liste_categorie;
+    
+}
+	
 
 ?>
 

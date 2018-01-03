@@ -9,8 +9,8 @@
  
     <body>
  
-    <!--  <?php include 'headernav.php' ?>	 -->
-    <?php require 'newcontroleur.php' ?>
+    <?php //include 'headernav.php' ?>
+    <?php require 'controleur_catalogue.php' ?>
 
     <!-- Le corps -->
     <h1>Catalogue</h1> 
@@ -21,7 +21,7 @@
 				foreach($liste_capteurs as $element)
 				{
 					echo '<a class="w3-button w3-block w3-teal" 
-					href="newvuecapteur.php?id_catalogue='.$element['id'].'" >' . $element['nom'] . '</a> <br/>';
+					href="vue_donnes_catalogue.php?id_catalogue='.$element['id'].'" >' . $element['nom'] . '</a>';
 				}
 				?>
 			</ul>
@@ -32,7 +32,7 @@
 				foreach($liste_actionneurs as $element)
 				{
 					echo '<a class="w3-button w3-block w3-teal" 
-					href="newvuecapteur.php?id_catalogue='.$element['id'].'" >' . $element['nom'] . '</a> <br/>';
+					href="vue_donnes_catalogue.php?id_catalogue='.$element['id'].'" >' . $element['nom'] . '</a>';
 				} 
 				?>
 			</ul>
@@ -43,7 +43,7 @@
 				foreach($liste_cemacs as $element)
 				{
 					echo '<a class="w3-button w3-block w3-teal" 
-					href="newvuecapteur.php?id_catalogue='.$element['id'].'" >' . $element['nom'] . '</a> <br/>';
+					href="vue_donnes_catalogue.php?id_catalogue='.$element['id'].'" >' . $element['nom'] . '</a>';
 				}
 				?>
 			</ul>
@@ -54,7 +54,7 @@
 				foreach($liste_catalogue as $element)
 				{
 					echo '<a class="w3-button w3-block w3-teal" 
-					href="newvuecapteur.php?id_catalogue='.$element['id'].'" >' . $element['nom'] . '</a> <br/>' ;
+					href="vue_donnes_catalogue.php?id_catalogue='.$element['id'].'" >' . $element['nom'] . '</a>' ;
 				}
 				?>
 			</ul>
@@ -63,7 +63,7 @@
 
 
     
-<!-- <?php // include 'footer.php' ?>	-->
+ <?php// include 'footer.php' ?>
         
     </body>
 </html>

@@ -1,111 +1,35 @@
+@charset "ISO-8859-1";
+
 h1
 {
 	position : center;
 	font-family: Arial;
 	text-align : center;
-	font-size: 2em;
+	font-size: 2.4em;
 }
 
-
-#menu-liste, #menu-liste ul{
-padding:0;
-margin:0;
-list-style:none;
-text-align:center;
-}
-#menu-liste li{
-display:inline-block;
-position:relative;
-border-radius:8px 8px 0 0;
-}
-#menu-liste ul li{
-display:inherit;
-border-radius:0;
-}
-#menu-liste ul li: hover{
-border-radius:0;
-}
-#menu-liste ul li: last-child{
-border-radius:0 0 8px 8px;
-}
-#menu-liste ul{
-position:absolute;
-z-index: 1000;
-max-height:0;
-left: 0;
-right: 0;
-overflow:hidden;
--moz-transition: .8s all .3s;
--webkit-transition: .8s all .3s;
-transition: .8s all .3s;
-}
-#menu-liste li:hover ul{
-max-height:15em;
-}
-/* background des liens menus */
-#menu-liste li:first-child{
-background-color: #43B77A;
-background-image:-webkit-linear-gradient(top, #677F35 0%, #43B77A 100%);
-background-image:linear-gradient(to bottom, #677F35 0%, #43B77A; 100%);
-}
-#menu-liste li:nth-child(2){
-background-color: #43B77A;
-background-image: -webkit-linear-gradient(top, #677F35 0%, #43B77A 100%);
-background-image:linear-gradient(to bottom, #677F35 0%, #43B77A; 100%);
+div 
+{
+	width: 50%;
+	border:3px solid black;
+	text-align: center;
+	margin: auto;
+	margin-top:15px;
+	border-radius:10px;
+	font-family: Arial;
+	font-size: 1.5em
+	
 }
 
-#menu-liste li:nth-child(3){
-background-color: #43B77A;
-background-image: -webkit-linear-gradient(top, #677F35 0%, #43B77A 100%);
-background-image:linear-gradient(to bottom, #677F35 0%, #43B77A 100%);
-}
-
-#menu-liste li:last-child{
-background-color: #43B77A;
-background-image:-webkit-linear-gradient(top, #677F35 0%, #43B77A 100%);
-background-image:linear-gradient(to bottom, #677F35 0%, #43B77A 100%);
-}
-/* background des liens sous menus */
-#menu-liste li:first-child li{
-background:#43B77A;
-}
-#menu-liste li:nth-child(2) li{
-background:#43B77A;
-}
-#menu-liste li:nth-child(3) li{
-background:#43B77A;
-}
-#menu-liste li:last-child li{
-background:#43B77A;
-}
-/* background des liens menus et sous menus au survol */
-#menu-liste li:first-child:hover, #menu-liste li:first-child li:hover{
-background:#43B77A;
-}
-#menu-liste li:nth-child(2):hover, #menu-liste li:nth-child(2) li:hover{
-background:#43B77A;
-}
-#menu-liste li:nth-child(3):hover, #menu-liste li:nth-child(3) li:hover{
-background:#43B77A;
-}
-#menu-liste li:last-child:hover, #menu-liste li:last-child li:hover{
-background:#43B77A;
-}
-/* les a href */
-#menu-liste a{
-text-decoration:none;
-display:block;
-padding:8px 32px;
-color:#fff;
-font-family:arial;
-}
-#menu-liste ul a{
-padding:8px 0;
-}
-#menu-liste li:hover li a{
-color:#fff;
-text-transform:inherit;
-}
-#menu-liste li:hover a, #menu-liste li li:hover a{
-color:#000;
+h3
+{
+	width: 50%;
+	border:3px solid black;
+	text-align: center;
+	margin: auto;
+	margin-top:15px;
+	border-radius:8px;
+	font-family: Arial;
+	color: red; 
+	font-size : 1.7 em 
 }

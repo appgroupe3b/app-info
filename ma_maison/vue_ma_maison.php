@@ -11,7 +11,7 @@
     <body>
  
    
-	<?php include '../headernav/headernav.php' ?>
+	<?php /*include '../headernav/headernav.php' */?>
     
     <?php require 'controleur_ma_maison.php' ?>
     
@@ -21,29 +21,35 @@
     
     	<div>
 			<h3>
-				Mes pieces :
+				Mes pieces
 			</h3>
+			
+			<div id="affichage_pieces">
 			<?php 
 				foreach($pieces as $element)
 				{
 					echo '<a class="w3-button w3-block w3-teal" 
-					href="vue_capteurs.php?id_piece='.$element['id'].'" >' . $element['nom'] . '</a> <br/>';
+					href="vue_capteurs.php?id_piece='.htmlspecialchars($element['id']).'" >' . htmlspecialchars($element['nom']) . '</a> <br/>';
 				}
 			?>
+			</div>
 		</div>
 		
 		<div>
 			<h3>
-				Ajouter :
+				Ajouter
 			</h3>
-			<p><a href="vue_ajouter.php?ajouter=pièce">Ajouter une pièce</a></p>
-			<p><a href="vue_ajouter.php?ajouter=capteur">Ajouter une capteur</a></p>
+			<p><a href="controleur_ma_maison.php?ajouter=piece">Ajouter une pièce</a></p>
+			
+			
+			
+			<p><a href="controleur_ma_maison.php?ajouter=capteur">Ajouter un capteur</a></p>
 		
 		</div>
     </body>
     <!-- Le pied de page -->
 	<footer>
-	<?php include '../footer/footer.php' ?>
+	<?php /* include '../footer/footer.php' */ ?>
     </footer>
     
 </html>

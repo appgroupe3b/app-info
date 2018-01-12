@@ -3,19 +3,21 @@
 header {
 
 	background: #4C4C4C;
-	width: 100%;
+	width: 110%;
 	top: 0;
 	position: fixed;
 	margin: 0 auto;
+	margin-left: -15px;
 }
 
 
 
 nav {
-	width: 100%;
+	width: 110%;
 	margin-top: -94px;
 	background: #43B77A;
 	position: top-right;
+	margin-left: -15px;
 }
 
 a.button{
@@ -35,9 +37,12 @@ ul#menu_horizontal li {
 	display : inline;
 	margin-left: 5px;
 	padding : 0 2.7em; 	/* Pour espacer les boutons entre eux */
+	
+	
 }
 ul#menu_horizontal {
 	list-style-type : none; /* Car sinon les puces se placent n'importe où */
+	color: #fff;
 }
 body{
 	margin-top : 200px;
@@ -46,5 +51,4 @@ body{
 
 a {
 	text-decoration: none;
-	color: #fff;
 }

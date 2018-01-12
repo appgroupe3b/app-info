@@ -1,30 +1,25 @@
 <?php
-//On se connecte à la BDD
+//On se connecte Ã  la BDD
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=app;charset=utf8', 'root', '');
+    //$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(Exception $e)
 {
-        die('Erreur : '.$e->getMessage());
+    die('Erreur : '.$e->getMessage());
 }
-//on se sert du modèle
 
-include '../modele/modele_catalogue.php';
-include '../modele/modele_catalogue01.php';
+include 'modele_catalogue.php';
 
-$catalogue = recuperer_catalogue($bdd);
-$catalogue_capteurs = recuperer_capteurs($bdd);
-$catalogue_actionneurs = recuperer_actionneurs($bdd);
-$catalogue_cemacs = recuperer_cemacs($bdd);
-
+$liste_catalogue = recuperer_catalogue($bdd);
+$liste_capteurs = recuperer_capteurs($bdd);
+$liste_actionneurs = recuperer_actionneurs($bdd);
+$liste_cemacs = recuperer_cemacs($bdd);
 
 if (isset($_GET['id_catalogue']))
 {
     $id_catalogue = $_GET['id_catalogue'];
-    
-    $donnees = recuperer_donnees($bdd, $id_catalogue);
+    $liste_donnees = recuperer_donnees($bdd, $id_catalogue);
 }
-
-
 ?>

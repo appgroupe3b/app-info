@@ -1,0 +1,7 @@
+<?php
+
+function ajouter_message($bdd, $categorie, $message)
+{
+	$req = $bdd->prepare('INSERT INTO message(
+}
+?>

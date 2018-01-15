@@ -8,61 +8,47 @@
         <link rel="stylesheet" type="text/css" href="../footer/footer.css">
     </head>
 
-    <header>
-      <table>
-  			<tr>
-    			<td><img src="../img/logo.png" alt=""width="100" height="100" /></td>
-    			<td><font color="white" face="Verdana" ><h2>DomIsep</h2>
-    			<p>A smart house makes a better home <p></td></font>
-  			</tr>
-	</table>
-
-      </header>
-
-    <nav style="position: fixed; text-align: center;">
-    				<ul id="menu_horizontal">
-						<li><a href="../accueil/accueil.php" class="button">Accueil</a></li>
-						<li><a href="../ma_maison/ma_maison.php" class="button">Ma maison</a></li>
-						<li><a href="../programmations/programmations.php" class="button">Programmations</a></li>
-						<li><a href="suivi_consommation.php" class="button">Suivi de consommation</a></li>
-						<li><a href="espace_client.php" class="button">Espace Client</a></li>
-						<li><a href="../messagerie/messagerie.php" class="button">Nous contacter</a></li>
-					</ul>
-    </nav>
+    <?php include '../headernav/headernav.php' ?>
 
     	<body>
+    		<?php include 'controleur_messagerie.php' ?>
     		<p align="justify">
 			<main>
 				
-			<section style="text-align: center;">
+			<section>
 				
 				<h2>Messagerie</h2>
 
-				<form method="post" action="traitement.php">
+				<form method="post" action="">
    				<p>
        				<label for="categorie">A quelle catégorie se lie votre message ?</label><br /><br>
-       				<select name="categorie" id="categorie">
-           				<option value="c1">Catégorie 1</option>
-           				<option value="c2">Catégorie 2</option>
-           				<option value="c3">Catégorie 3</option>
-           				<option value="c4">Catégorie 4</option>
-           				<option value="c5">Catégorie 5</option>
+       			<div class="select">
+              <select name="categorie" id="categorie">
+       					<?php foreach ($categorie as $element) 
+       					{ 
+       					?>
+                  
+                  <option value="<?php echo $element['nom'];?>"><?php echo htmlspecialchars($element['nom']);?></option> 
+               
+                <?php 
+       					}
+       					?>
        				</select>
+            </div>
    				</p>
 
    					<p>
-       				<label for="ameliorer">
+       				<label for="message">
        				Comment pouvons nous vous aider ?
        				</label>
-       				<br />
+       				<br/>
        
-       				<textarea name="ameliorer" id="ameliorer" rows="10" cols="50"></textarea>       
+       				<textarea name="message" id="message" rows="10" cols="50"></textarea>       
    					</p>
+            <tr><td align="center"><input type="submit" value="Envoyer"></td></tr>
 				</form>
 				
 				<br>
-
-				<tr><td align="center"><input type="submit" value="Envoyer"></td></tr>
 						
 			</section>
 	
@@ -75,15 +61,7 @@
 
     	<footer>
 
-    		<div id="socials">
-
-    			<a href="#" class="social"><img src="../img/mail.png" alt="social"/></a>
-                <a href="#" class="social"><img src="../img/twi.png" alt="social"/></a>
-                <a href="#" class="social"><img src="../img/face.png" alt="social"/></a>
-
-        	</div>
-
-        	<div class="copyright">&copy;  2017 All Rights Reserved</div>
+    		<?php include '../footer/footer.php' ?>
 
     	</footer>
 

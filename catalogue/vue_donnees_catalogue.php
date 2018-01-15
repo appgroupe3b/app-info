@@ -13,7 +13,7 @@
 
 <?php //include '../headernav/headernav.php'; ?>
     
-    <?php require 'controleur_catalogue.php' ?>
+    <?php require_once 'controleur_catalogue.php' ?>
     
 	
     <!-- Le corps -->
@@ -44,14 +44,14 @@
 				if(isset($liste_donnees)) {
 				    foreach($liste_donnees as $truc)
 				    {
-				        echo 'Son prix est de ' . $truc['prix'] . 'euros.' .  '<br/>';
+				        echo 'Son prix est de ' . $truc['prix'] . ' euros.' .  '<br/>';
 				    }
 				}
 			
 				if(isset($liste_donnees)) {
 				    foreach($liste_donnees as $truc)
 				    {
-				        echo 'Il est installé dans '. $truc['unites_actives'] . 'foyer(s).' .'<br/>';
+				        echo 'Il est installé dans '. $truc['unites_actives'] . ' foyer(s).' .'<br/>';
 				    }
 				}?>
 				
@@ -62,11 +62,16 @@
 				    {
 				        $promotions = $truc['promotions'];
 				        if ($promotions!=0 ) {
-				            echo "Vous avez une remise sur ce produit de " . $truc['unites_actives'] . "%."  ;
+				            echo "Vous avez une remise sur ce produit de " . $truc['promotions'] . "%."  ;
 				        } 
 				    }
 				}
 				?>
+				<script >
+				var = $promotions;
+				if (var != 0 ){
+					alert (' Ce produit est en promotion ! ' );
+					</script>
 				</h3>
 				
 			

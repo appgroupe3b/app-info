@@ -1,0 +1,141 @@
+header {
+
+	background: #4C4C4C;
+	width: 100%;
+	top: 0;
+	position: fixed;
+	margin: 0 auto;
+}
+
+
+
+nav {
+	width: 100%;
+	margin-top: -94px;
+	background: #43B77A;
+	position: fixed;
+}
+
+a.button{
+			background:url(img/button.gif);
+
+			color:#FFFFFF;
+			font-weight:bold;
+			text-decoration:none;
+		}
+
+		a:hover.button{
+			color:#4C4C4C;
+			
+;
+}
+/* Je sélectionne les <li> du menu horizontal */
+ul#menu_horizontal li {
+display : inline;
+margin-left: 5px;
+padding : 0 2.7em; /* Pour espacer les boutons entre eux */
+}
+ul#menu_horizontal {
+list-style-type : none; /* Car sinon les puces se placent n'importe où */
+}
+body{
+margin-top : 200px;
+	width : AUTO;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer {
+    background-color: #4C4C4C;
+    position: relative;
+    margin-bottom: 0px;
+		width: 100%;
+}
+
+.social {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.social a {
+    color: #fff;
+    margin-left: 20px;
+}
+.social a:hover {
+    color: #FFFFFF;
+}
+
+.social .info {
+    display: inline-block;
+    vertical-align: middle;
+}
+.social .info .follow {
+    display: block;
+}
+.social .info .num {
+    display: block;
+}
+.copyright {
+    color: #fff;
+    margin-top: 5px;
+}
+
+#menu-accordeon {
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align: center;
+  width: 180px;
+}
+#menu-accordeon ul {
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align: center;
+}
+#menu-accordeon li {
+   background-color:#729EBF; 
+   background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+   background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+   border-radius: 6px;
+   margin-bottom:2px;
+   box-shadow: 3px 3px 3px #999;
+   border:solid 1px #333A40
+}
+#menu-accordeon li li {
+   max-height:0;
+   overflow: hidden;
+   transition: all .5s;
+   border-radius:0;
+   background: #444;
+   box-shadow: none;
+   border:none;
+   margin:0
+}
+#menu-accordeon a {
+  display:block;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 0;
+  font-family: verdana;
+  font-size:1.2em
+}
+#menu-accordeon ul li a, #menu-accordeon li:hover li a {
+  font-size:1em
+}
+#menu-accordeon li:hover {
+   background: #729EBF
+}
+#menu-accordeon li li:hover {
+   background: #999;
+}
+#menu-accordeon ul li:last-child {
+   border-radius: 0 0 6px 6px;
+   border:none;
+}
+#menu-accordeon li:hover li {
+  max-height: 15em;
+}

@@ -26,12 +26,28 @@
        					{ 
        					?>
 							
-							<option value="<?php echo htmlspecialchars($element['id']) ?>"><?php echo htmlspecialchars($element['nom']);?></option>
+							<option value="<?php echo $element['id'] ?>"><?php echo $element['nom'];?></option>
 						
 						<?php 
        					}
        					?>
 						</select>
+						</br></br>
+					<label for="select_type_capteur">Quel est le type de ce capteur ?</label>
+					
+					<!-- on récupère les types de capteurs pour en choisir un -->
+						<select name="select_type_capteur" id="select_type_capteur">
+       					<?php foreach ($types_capteurs as $element) 
+       					{ 
+       					?>
+							
+							<option value="<?php echo $element['id'] ?>"><?php echo $element['reference'];?></option>
+						
+						<?php 
+       					}
+       					?>
+						</select>
+						
 						</br></br>
 						<label for="nom_nouveau_capteur">Nom du capteur :</label>
 						<input type="text" name="nom_nouveau_capteur" id="nom_nouveau_capteur" placeholder="Ex : Capteur 1" size="20" maxlength="15" /></br></br>

@@ -13,7 +13,7 @@
    
 	<?php /*include '../headernav/headernav.php' */?>
     
-    <?php require 'controleur_ma_maison.php' ?>
+    <?php require_once('controleur_ma_maison.php') ?>
     
 	
     <!-- Le corps -->
@@ -29,7 +29,7 @@
 				foreach($pieces as $element)
 				{
 					echo '<a class="w3-button w3-block w3-teal" 
-					href="vue_capteurs.php?id_piece='.htmlspecialchars($element['id']).'" >' . htmlspecialchars($element['nom']) . '</a> <br/>';
+					href="controleur_ma_maison.php?id_piece='.$element['id'].'" >' . $element['nom'] . '</a> <br/>';
 				}
 			?>
 			</div>
@@ -37,13 +37,15 @@
 		
 		<div>
 			<h3>
-				Ajouter
+				Actions
 			</h3>
 			<p><a href="controleur_ma_maison.php?ajouter=piece">Ajouter une pièce</a></p>
 			
-			
-			
 			<p><a href="controleur_ma_maison.php?ajouter=capteur">Ajouter un capteur</a></p>
+			
+			<p><a href="controleur_ma_maison.php?ajouter=supprimer">Supprimer une pièce</a></p>
+			
+			<p><a href="controleur_ma_maison.php?ajouter=supprimer_c">Supprimer un capteur</a></p>
 		
 		</div>
     </body>

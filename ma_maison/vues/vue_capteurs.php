@@ -10,7 +10,7 @@
  
     <body>
  
-    <?php include '../headernav/headernav.php'; ?>	
+    <?php //include '../headernav/headernav.php'; ?>	
     
     <?php require 'controleur_ma_maison.php' ?>
     
@@ -22,10 +22,11 @@
 			
 			<?php 
 			
-				if(isset($capteurs)) {
+				if(isset($capteurs)) 
+				{
 					foreach($capteurs as $truc)
 					{
-						echo $truc['nom'] . '<br/>';
+						echo '<p>Le nom du capteur est : <strong>' . $truc['nom'] . "</strong>  et sa référence est : <strong>" . $truc['reference'] . '</strong></p><br/>';
 					}
 				}
 			?>
@@ -33,7 +34,7 @@
     
     <!-- Le pied de page -->
 	<footer>
-       <?php include '../footer/footer.php' ?>
+       <?php //include '../footer/footer.php' ?>
 	</footer>
     </body>
 </html>
